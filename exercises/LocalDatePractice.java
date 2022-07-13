@@ -19,6 +19,8 @@ public class LocalDatePractice {
         localDatePractice.addWeeks(1);
         localDatePractice.removeWeeks(52);
 
+       localDatePractice.dateBeforeAfter();
+
 //        System.out.println(localDatePractice.printSuggetionToMakeWishes(localDate, event));
 //
 //        System.out.println(new LocalDatePractice().getTodayDate());
@@ -120,13 +122,17 @@ public class LocalDatePractice {
         // 1. practice to use after method
         LocalDate localDate = getTodayDate();
         // here create custom date that represents tomorrow
+        LocalDate localDate1 =localDate.plus(1, ChronoUnit.DAYS);
 
         // check if tomorrow is going after today date print if yes
+        System.out.println(localDate1.isAfter(localDate));
 
         // 2. practice to use before method
         // here create customer local date to represent yesterday
+        LocalDate localDate2 = localDate.minus(1, ChronoUnit.DAYS);
 
         // check if yesterday is before tomorrow and print it if yes
+        System.out.println(localDate2.isBefore(localDate));
 
 
     }
